@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IESTP Espinar</title>
+    <link rel="stylesheet" href="login/bienvenida.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    img {
+      border-radius: 50%;
+      width: 100px;
+    }
+  </style>
+
+</head>
+<body>
+    <h1>Bienvenido/a</h1>
+  <p id="nombre"></p>
+  <p id="email"></p>
+  <img id="foto" alt="Foto de perfil" />
+
+  <script>
+    // Recuperamos los datos del localStorage
+    const nombre = localStorage.getItem("nombre");
+    const email = localStorage.getItem("email");
+    const foto = localStorage.getItem("foto");
+
+    // Mostramos los datos en la página
+    document.getElementById("nombre").innerText = "Nombre: " + nombre;
+    document.getElementById("email").innerText = "Correo: " + email;
+    document.getElementById("foto").src = foto;
+  </script>
+  <h1>PROYECTOS</h1>
+    <div class="container">
+        <a href="trabajos/CONSULTA-DNI/index.html" class="box">CONSULTA DNI</a>
+        <a href="trabajos/CONSLTA_RUC/index.html" class="box">CONSULTA RUC</a>
+        <a href="trabajos/PROYECTO_JSON/proyec_json.html" class="box">PROYECTO JSON</a>
+        <a href="trabajos/PROYECTO_XML/index.html" class="box">PROYECTO XML</a>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

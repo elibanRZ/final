@@ -1,0 +1,126 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #0f0c29, #302b63, #24243e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+}
+
+.login-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+  transform: translateY(-20px);
+  transition: transform 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-25px) scale(1.01);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+.login-container h2 {
+  margin-bottom: 25px;
+  color: #00ffe7;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 95%;
+  padding: 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.login-container input::placeholder {
+  color: #ccc;
+}
+
+.login-container input:focus {
+  outline: none;
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(90deg, #00ffe7, #007cf0);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ffe7;
+}
+
+.login-container button:hover {
+  background: linear-gradient(90deg, #00d4ff, #0057e7);
+  box-shadow: 0 0 15px #00ffe7;
+  transform: scale(1.05);
+}
+
+.divider {
+  margin: 25px 0;
+  position: relative;
+  text-align: center;
+  color: #ccc;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.3);
+  top: 50%;
+}
+
+.divider::before {
+  left: 0;
+}
+.divider::after {
+  right: 0;
+}
+
+.divider span {
+  padding: 0 12px;
+  position: relative;
+  z-index: 1;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 5px #00ffe7;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
